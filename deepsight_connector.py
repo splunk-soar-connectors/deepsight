@@ -922,7 +922,7 @@ class DeepSightConnector(BaseConnector):
             self.debug_print('Handled exception in _create_dict_hash', e)
             return None
 
-        return hashlib.md5(input_dict_str).hexdigest()
+        return hashlib.sha256(input_dict_str).hexdigest()
 
     def handle_action(self, param):
 

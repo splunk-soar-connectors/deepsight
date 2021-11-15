@@ -13,6 +13,7 @@
     "product_name": "DeepSight",
     "product_version_regex": ".*",
     "min_phantom_version": "4.9.39220",
+    "fips_compliant": "true",
     "logo": "logo_accenture.svg",
     "logo_dark": "logo_accenture_dark.svg",
     "python_version": "3",
