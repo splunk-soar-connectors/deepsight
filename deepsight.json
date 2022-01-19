@@ -5,14 +5,15 @@
     "publisher": "Splunk",
     "package_name": "phantom_accenturedeepsight",
     "type": "reputation",
-    "license": "Copyright (c) 2021 Splunk Inc.",
+    "license": "Copyright (c) 2021-2022 Splunk Inc.",
     "main_module": "deepsight_connector.py",
-    "app_version": "1.0.2",
+    "app_version": "1.0.3",
     "utctime_updated": "2022-01-07T21:10:57.000000Z",
     "product_vendor": "Accenture",
     "product_name": "DeepSight",
     "product_version_regex": ".*",
-    "min_phantom_version": "4.9.39220",
+    "min_phantom_version": "5.0.0",
+    "fips_compliant": true,
     "logo": "logo_accenture.svg",
     "logo_dark": "logo_accenture_dark.svg",
     "python_version": "3",
@@ -109,7 +110,8 @@
                     ],
                     "description": "Domain to query",
                     "data_type": "string",
-                    "primary": true
+                    "primary": true,
+                    "order": 0
                 }
             },
             "versions": "EQ(*)",
@@ -442,7 +444,8 @@
                     ],
                     "description": "File hash (MD5 or SHA256)",
                     "data_type": "string",
-                    "primary": true
+                    "primary": true,
+                    "order": 0
                 }
             },
             "versions": "EQ(*)",
@@ -587,7 +590,8 @@
                     ],
                     "description": "URL to query",
                     "data_type": "string",
-                    "primary": true
+                    "primary": true,
+                    "order": 0
                 }
             },
             "versions": "EQ(*)",
@@ -863,7 +867,8 @@
                     ],
                     "description": "IP to query",
                     "data_type": "string",
-                    "primary": true
+                    "primary": true,
+                    "order": 0
                 }
             },
             "versions": "EQ(*)",
@@ -1190,7 +1195,8 @@
                     ],
                     "description": "File hash to hunt",
                     "data_type": "string",
-                    "primary": true
+                    "primary": true,
+                    "order": 0
                 }
             },
             "render": {
