@@ -5,7 +5,7 @@
     "publisher": "Splunk",
     "package_name": "phantom_accenturedeepsight",
     "type": "reputation",
-    "license": "Copyright (c) 2021 Splunk Inc.",
+    "license": "Copyright 2021-2022 Splunk Inc.",
     "main_module": "deepsight_connector.py",
     "app_version": "1.0.3",
     "utctime_updated": "2022-01-07T21:10:57.000000Z",
@@ -110,7 +110,8 @@
                     ],
                     "description": "Domain to query",
                     "data_type": "string",
-                    "primary": true
+                    "primary": true,
+                    "order": 0
                 }
             },
             "versions": "EQ(*)",
@@ -443,7 +444,8 @@
                     ],
                     "description": "File hash (MD5 or SHA256)",
                     "data_type": "string",
-                    "primary": true
+                    "primary": true,
+                    "order": 0
                 }
             },
             "versions": "EQ(*)",
@@ -588,7 +590,8 @@
                     ],
                     "description": "URL to query",
                     "data_type": "string",
-                    "primary": true
+                    "primary": true,
+                    "order": 0
                 }
             },
             "versions": "EQ(*)",
@@ -864,7 +867,8 @@
                     ],
                     "description": "IP to query",
                     "data_type": "string",
-                    "primary": true
+                    "primary": true,
+                    "order": 0
                 }
             },
             "versions": "EQ(*)",
@@ -1191,7 +1195,8 @@
                     ],
                     "description": "File hash to hunt",
                     "data_type": "string",
-                    "primary": true
+                    "primary": true,
+                    "order": 0
                 }
             },
             "render": {
