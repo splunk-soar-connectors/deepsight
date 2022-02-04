@@ -15,21 +15,21 @@
 #
 #
 # Phantom imports
+import hashlib
+import json
+import os
+import shutil
+import tempfile
+
 import phantom.app as phantom
-from phantom.base_connector import BaseConnector
-from phantom.action_result import ActionResult
-from phantom.vault import Vault
 import phantom.rules as ph_rules
+import requests
+from phantom.action_result import ActionResult
+from phantom.base_connector import BaseConnector
+from phantom.vault import Vault
 
 # Local imports
 from deepsight_consts import *
-
-import requests
-import json
-import os
-import tempfile
-import shutil
-import hashlib
 
 
 class DeepSightConnector(BaseConnector):
@@ -978,6 +978,7 @@ class DeepSightConnector(BaseConnector):
 
 if __name__ == '__main__':
     import sys
+
     import pudb
 
     pudb.set_trace()
