@@ -12,7 +12,7 @@
     "product_vendor": "Accenture",
     "product_name": "DeepSight",
     "product_version_regex": ".*",
-    "min_phantom_version": "5.0.0",
+    "min_phantom_version": "5.1.0",
     "fips_compliant": true,
     "logo": "logo_accenture.svg",
     "logo_dark": "logo_accenture_dark.svg",
@@ -59,7 +59,7 @@
             "type": "ingest",
             "read_only": true,
             "description": "Ingest reports",
-            "verbose": "<p>For the first poll, ingests the latest number of reports set in <b>max_reports_first_ingestion</b>. Subsequent polls ingest new reports. To ingest all current reports, set <b>max_reports_first_ingestion</b> to a number equal to or greater than the number of reports in DeepSight and set the poll interval large enough to allow all reports to be ingested. The poll interval can be adjusted after the first poll completes.<p><table><tbody><tr class='plain'><th>IOC</th><th>Artifact Name</th><th>CEF Field</th></tr><tr><td>Address IPv4</td><td>IP Artifact</td><td>deviceAddress</td></tr><tr><td>Email</td><td>Email Address Artifact</td><td>emailAddress</td></tr><tr><td>File</td><td>File Artifact</td><td>fileHashMd5, fileHashSha256, fileName, fileSize</td></tr><tr><td>Host</td><td>Domain Artifact</td><td>deviceHostName</td></tr><tr><td>URL</td><td>URL Artifact</td><td>requestURL</td></tr><td>ReportID</td><td>Report Artifact</td><td>deepsightReportId</td><tr></tr></tbody></table>",
+            "verbose": "<p>For the first poll, ingests the latest number of reports set in <b>max_reports_first_ingestion</b>. Subsequent polls ingest new reports. To ingest all current reports, set <b>max_reports_first_ingestion</b> to a number equal to or greater than the number of reports in DeepSight and set the poll interval large enough to allow all reports to be ingested. The poll interval can be adjusted after the first poll completes.<p><table><tbody><tr class='plain'><th>IOC</th><th>Artifact Name</th><th>CEF Field</th></tr><tr><td>Address IPv4</td><td>IP Artifact</td><td>deviceAddress</td></tr><tr><td>Email</td><td>Email Address Artifact</td><td>emailAddress</td></tr><tr><td>File</td><td>File Artifact</td><td>fileHashMd5, fileHashSha256, fileName, fileSize</td></tr><tr><td>Host</td><td>Domain Artifact</td><td>deviceHostName</td></tr><tr><td>URL</td><td>URL Artifact</td><td>requestURL</td></tr><td>ReportID</td><td>Report Artifact</td><td>deepsightReportId</td><tr></tr></tbody></table>.",
             "parameters": {
                 "container_id": {
                     "description": "Comma separated report IDs",
