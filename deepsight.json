@@ -5,14 +5,15 @@
     "publisher": "Splunk",
     "package_name": "phantom_accenturedeepsight",
     "type": "reputation",
-    "license": "Copyright (c) 2021 Splunk Inc.",
+    "license": "Copyright (c) 2021-2022 Splunk Inc.",
     "main_module": "deepsight_connector.py",
-    "app_version": "1.0.0",
-    "utctime_updated": "2021-04-15T22:32:41.000000Z",
+    "app_version": "1.0.4",
+    "utctime_updated": "2022-01-19T19:37:42.000000Z",
     "product_vendor": "Accenture",
     "product_name": "DeepSight",
     "product_version_regex": ".*",
-    "min_phantom_version": "4.9.39220",
+    "min_phantom_version": "5.1.0",
+    "fips_compliant": true,
     "logo": "logo_accenture.svg",
     "logo_dark": "logo_accenture_dark.svg",
     "python_version": "3",
@@ -58,7 +59,7 @@
             "type": "ingest",
             "read_only": true,
             "description": "Ingest reports",
-            "verbose": "<p>For the first poll, ingests the latest number of reports set in <b>max_reports_first_ingestion</b>. Subsequent polls ingest new reports. To ingest all current reports, set <b>max_reports_first_ingestion</b> to a number equal to or greater than the number of reports in DeepSight and set the poll interval large enough to allow all reports to be ingested. The poll interval can be adjusted after the first poll completes.<p><table><tbody><tr class='plain'><th>IOC</th><th>Artifact Name</th><th>CEF Field</th></tr><tr><td>Address IPv4</td><td>IP Artifact</td><td>deviceAddress</td></tr><tr><td>Email</td><td>Email Address Artifact</td><td>emailAddress</td></tr><tr><td>File</td><td>File Artifact</td><td>fileHashMd5, fileHashSha256, fileName, fileSize</td></tr><tr><td>Host</td><td>Domain Artifact</td><td>deviceHostName</td></tr><tr><td>URL</td><td>URL Artifact</td><td>requestURL</td></tr><td>ReportID</td><td>Report Artifact</td><td>deepsightReportId</td><tr></tr></tbody></table>",
+            "verbose": "<p>For the first poll, ingests the latest number of reports set in <b>max_reports_first_ingestion</b>. Subsequent polls ingest new reports. To ingest all current reports, set <b>max_reports_first_ingestion</b> to a number equal to or greater than the number of reports in DeepSight and set the poll interval large enough to allow all reports to be ingested. The poll interval can be adjusted after the first poll completes.<p><table><tbody><tr class='plain'><th>IOC</th><th>Artifact Name</th><th>CEF Field</th></tr><tr><td>Address IPv4</td><td>IP Artifact</td><td>deviceAddress</td></tr><tr><td>Email</td><td>Email Address Artifact</td><td>emailAddress</td></tr><tr><td>File</td><td>File Artifact</td><td>fileHashMd5, fileHashSha256, fileName, fileSize</td></tr><tr><td>Host</td><td>Domain Artifact</td><td>deviceHostName</td></tr><tr><td>URL</td><td>URL Artifact</td><td>requestURL</td></tr><td>ReportID</td><td>Report Artifact</td><td>deepsightReportId</td><tr></tr></tbody></table>.",
             "parameters": {
                 "container_id": {
                     "description": "Comma separated report IDs",
@@ -109,7 +110,8 @@
                     ],
                     "description": "Domain to query",
                     "data_type": "string",
-                    "primary": true
+                    "primary": true,
+                    "order": 0
                 }
             },
             "versions": "EQ(*)",
@@ -442,7 +444,8 @@
                     ],
                     "description": "File hash (MD5 or SHA256)",
                     "data_type": "string",
-                    "primary": true
+                    "primary": true,
+                    "order": 0
                 }
             },
             "versions": "EQ(*)",
@@ -587,7 +590,8 @@
                     ],
                     "description": "URL to query",
                     "data_type": "string",
-                    "primary": true
+                    "primary": true,
+                    "order": 0
                 }
             },
             "versions": "EQ(*)",
@@ -863,7 +867,8 @@
                     ],
                     "description": "IP to query",
                     "data_type": "string",
-                    "primary": true
+                    "primary": true,
+                    "order": 0
                 }
             },
             "versions": "EQ(*)",
@@ -1190,7 +1195,8 @@
                     ],
                     "description": "File hash to hunt",
                     "data_type": "string",
-                    "primary": true
+                    "primary": true,
+                    "order": 0
                 }
             },
             "render": {
@@ -2123,5 +2129,29 @@
             ],
             "versions": "EQ(*)"
         }
-    ]
+    ],
+    "pip_dependencies": {
+        "wheel": [
+            {
+                "module": "certifi",
+                "input_file": "wheels/shared/certifi-2021.10.8-py2.py3-none-any.whl"
+            },
+            {
+                "module": "chardet",
+                "input_file": "wheels/shared/chardet-3.0.4-py2.py3-none-any.whl"
+            },
+            {
+                "module": "idna",
+                "input_file": "wheels/shared/idna-2.10-py2.py3-none-any.whl"
+            },
+            {
+                "module": "requests",
+                "input_file": "wheels/shared/requests-2.25.0-py2.py3-none-any.whl"
+            },
+            {
+                "module": "urllib3",
+                "input_file": "wheels/shared/urllib3-1.26.8-py2.py3-none-any.whl"
+            }
+        ]
+    }
 }
