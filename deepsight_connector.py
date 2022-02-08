@@ -15,21 +15,21 @@
 #
 #
 # Phantom imports
+import hashlib
+import json
+import os
+import shutil
+import tempfile
+
 import phantom.app as phantom
-from phantom.base_connector import BaseConnector
-from phantom.action_result import ActionResult
-from phantom.vault import Vault
 import phantom.rules as ph_rules
+import requests
+from phantom.action_result import ActionResult
+from phantom.base_connector import BaseConnector
+from phantom.vault import Vault
 
 # Local imports
 from deepsight_consts import *
-
-import requests
-import json
-import os
-import tempfile
-import shutil
-import hashlib
 
 
 class DeepSightConnector(BaseConnector):
@@ -978,12 +978,13 @@ class DeepSightConnector(BaseConnector):
 
 if __name__ == '__main__':
     import sys
+
     import pudb
 
     pudb.set_trace()
     if len(sys.argv) < 2:
         print('No test json specified as input')
-        exit(0)
+        sys.exit(0)
     with open(sys.argv[1]) as f:
         in_json = f.read()
         in_json = json.loads(in_json)
@@ -993,4 +994,4 @@ if __name__ == '__main__':
         ret_val = connector._handle_action(json.dumps(in_json), None)
         print(json.dumps(json.loads(ret_val), indent=4))
 
-    exit(0)
+    sys.exit(0)
