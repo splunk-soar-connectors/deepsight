@@ -2,11 +2,11 @@
 # DeepSight
 
 Publisher: Splunk  
-Connector Version: 1\.0\.1  
+Connector Version: 1\.0\.4  
 Product Vendor: Accenture  
 Product Name: DeepSight  
 Product Version Supported (regex): "\.\*"  
-Minimum Product Version: 4\.9\.39220  
+Minimum Product Version: 5\.1\.0  
 
 This app supports hunting and a variety of investigative actions, in addition to report ingestion, from the Accenture DeepSight Intelligence cyber security service
 
@@ -47,7 +47,7 @@ Ingest reports
 Type: **ingest**  
 Read only: **True**
 
-<p>For the first poll, ingests the latest number of reports set in <b>max\_reports\_first\_ingestion</b>\. Subsequent polls ingest new reports\. To ingest all current reports, set <b>max\_reports\_first\_ingestion</b> to a number equal to or greater than the number of reports in DeepSight and set the poll interval large enough to allow all reports to be ingested\. The poll interval can be adjusted after the first poll completes\.<p><table><tbody><tr class='plain'><th>IOC</th><th>Artifact Name</th><th>CEF Field</th></tr><tr><td>Address IPv4</td><td>IP Artifact</td><td>deviceAddress</td></tr><tr><td>Email</td><td>Email Address Artifact</td><td>emailAddress</td></tr><tr><td>File</td><td>File Artifact</td><td>fileHashMd5, fileHashSha256, fileName, fileSize</td></tr><tr><td>Host</td><td>Domain Artifact</td><td>deviceHostName</td></tr><tr><td>URL</td><td>URL Artifact</td><td>requestURL</td></tr><td>ReportID</td><td>Report Artifact</td><td>deepsightReportId</td><tr></tr></tbody></table>
+<p>For the first poll, ingests the latest number of reports set in <b>max\_reports\_first\_ingestion</b>\. Subsequent polls ingest new reports\. To ingest all current reports, set <b>max\_reports\_first\_ingestion</b> to a number equal to or greater than the number of reports in DeepSight and set the poll interval large enough to allow all reports to be ingested\. The poll interval can be adjusted after the first poll completes\.<p><table><tbody><tr class='plain'><th>IOC</th><th>Artifact Name</th><th>CEF Field</th></tr><tr><td>Address IPv4</td><td>IP Artifact</td><td>deviceAddress</td></tr><tr><td>Email</td><td>Email Address Artifact</td><td>emailAddress</td></tr><tr><td>File</td><td>File Artifact</td><td>fileHashMd5, fileHashSha256, fileName, fileSize</td></tr><tr><td>Host</td><td>Domain Artifact</td><td>deviceHostName</td></tr><tr><td>URL</td><td>URL Artifact</td><td>requestURL</td></tr><td>ReportID</td><td>Report Artifact</td><td>deepsightReportId</td><tr></tr></tbody></table>\.
 
 #### Action Parameters
 PARAMETER | REQUIRED | DESCRIPTION | TYPE | CONTAINS
